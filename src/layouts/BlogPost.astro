@@ -2,16 +2,29 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	heroImageDescription,
+} = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
 	<article>
 		<div class="hero-image">
-			{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+			{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+			{
+				heroImageDescription && (
+					<p class="mt-4 text-gray-600" set:html={heroImageDescription} />
+				)
+			}
 		</div>
 		<div class="prose">
 			<div class="title">

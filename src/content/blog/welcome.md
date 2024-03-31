@@ -6,7 +6,8 @@ updatedDate: 2024-03-19 12:48
 tags:
   - welcome
 public: true
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: './images/growtika.jpg'
+heroImageDescription: Photo by <a href="https://unsplash.com/@growtika?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Growtika</a> on <a href="https://unsplash.com/photos/a-computer-with-a-keyboard-and-mouse-9WnjxT1NCoY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 ---
 
 This is a blog where I plan to share projects that I work on to grow my skills as a software engineer. For these projects, I plan on using tools, technologies and languages that I don't usually get to work with. I will try to use things that are open source or at least source available.
