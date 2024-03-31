@@ -1,7 +1,7 @@
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
 export async function getAllTags() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection('blog');
   const tags = new Set<string>();
 
   posts.forEach((post) => {
@@ -14,9 +14,7 @@ export async function getAllTags() {
 }
 
 export async function getAllPostsWithTag(tagName: string) {
-  const posts = await getCollection("blog");
+  const posts = await getCollection('blog');
 
-  return posts.filter(
-    (post) => post.data.tags && post.data.tags.includes(tagName),
-  );
+  return posts.filter((post) => post.data.tags && post.data.tags.includes(tagName));
 }

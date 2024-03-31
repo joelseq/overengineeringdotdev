@@ -1,9 +1,9 @@
 ---
-import FormattedDate from "@/components/FormattedDate.astro";
-import PostTag from "@/components/PostTag.astro";
-import type { CollectionEntry } from "astro:content";
+import FormattedDate from '@/components/FormattedDate.astro';
+import PostTag from '@/components/PostTag.astro';
+import type { CollectionEntry } from 'astro:content';
 
-type BlogPost = CollectionEntry<"blog">;
+type BlogPost = CollectionEntry<'blog'>;
 
 interface Props {
   posts: BlogPost[];
@@ -19,7 +19,7 @@ const { posts } = Astro.props;
         <div class="my-8">
           <div class="flex">
             <p class="mr-2">
-              {" "}
+              {' '}
               <a href={`/blog/${post.slug}`}>{post.data.title}</a>
             </p>
             <p class="text-gray-500 italic">

@@ -1,25 +1,25 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import H2 from "@/components/H2.astro";
-import { getCollection } from "astro:content";
-import { RECENT_POSTS_COUNT } from "@/consts";
-import PostList from "@/components/PostList.astro";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import H2 from '@/components/H2.astro';
+import { getCollection } from 'astro:content';
+import { RECENT_POSTS_COUNT } from '@/consts';
+import PostList from '@/components/PostList.astro';
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog');
 const recentPosts = posts
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, RECENT_POSTS_COUNT);
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, RECENT_POSTS_COUNT);
 ---
 
 <BaseLayout>
-	<p>A blog for building solutions in search of problems</p>
-	{
-		recentPosts.length > 0 && (
-			<>
-				<hr class="my-8" />
-				<H2>Recent Posts</H2>
-				<PostList posts={recentPosts} />
-			</>
-		)
-	}
+  <p>A blog for building solutions in search of problems</p>
+  {
+    recentPosts.length > 0 && (
+      <>
+        <hr class="my-8" />
+        <H2>Recent Posts</H2>
+        <PostList posts={recentPosts} />
+      </>
+    )
+  }
 </BaseLayout>

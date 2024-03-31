@@ -1,8 +1,8 @@
 ---
-import { getAllTags, getAllPostsWithTag } from "@/utils";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import PostList from "@/components/PostList.astro";
-import H2 from "@/components/H2.astro";
+import { getAllTags, getAllPostsWithTag } from '@/utils';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostList from '@/components/PostList.astro';
+import H2 from '@/components/H2.astro';
 
 export async function getStaticPaths() {
   const tags = await getAllTags();
